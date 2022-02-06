@@ -1,5 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from '../pages/Layout';
+import DevicesList from './DevicesList';
+import LogsList from './LogsList';
 
 class EndPointManager extends React.Component {
 	constructor(props) {
@@ -8,15 +11,14 @@ class EndPointManager extends React.Component {
 
 	render() {
 		return (
-			<div className="wrapper">
-				<Navbar />
-				<div className="container">
-					<ul>
-						<li>Device 1</li>
-						<li>Device 2</li>
-					</ul>
-				</div>
-			</div>
+			<BrowserRouter>
+		      <Routes>
+		        <Route path="/" element={<Layout />}>
+		          <Route index element={<DevicesList />} />
+		          <Route path="logs" element={<LogsList />} />
+		        </Route>
+		      </Routes>
+		    </BrowserRouter>
 		);
 	}
 }
