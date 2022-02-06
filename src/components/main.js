@@ -1,4 +1,6 @@
 import React from 'react';
+import '../globals/app.css';
+import EndPointManager from './EndPointManager';
 
 class App extends React.Component {
 	constructor(props) {
@@ -6,7 +8,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		return <div>Welcome to my test app!</div>;
+		return <EndPointManager />;
 	}
 }
 
