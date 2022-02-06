@@ -79,8 +79,8 @@ npm run start
 
 
 # Task List
-- Basic reaact aop setup: Done
-- Add bas components and basic styling: Done
+- Basic react app setup: Done
+- Add basic components and basic styling: Done
 - Add routing for navigating multiple vew: Done
 - Add Functional components : Pending
 - Add Styled components: Pending
