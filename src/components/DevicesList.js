@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, ActionButtons, Button, CardsList } from '../utils/StyledCompLib';
+import ItemCard from './ui/ItemCard';
 
-class DevicesList extends React.Component {
-	constructor(props) {
-	  super(props);
-	}
+export default function DevicesList() {
+	const [logs, setLogs] = useState([]);
 
-	render() {
-		return (
-            <div className="container">
-                <ul>
-                    <li>Device 1</li>
-                    <li>Device 2</li>
-                </ul>
-            </div>
-		);
-	}
+	useEffect(() => {
+		setLogs([
+			{ id: 1, name: 'x', status: 'available' },
+			{ id: 1, name: 'y', status: 'available' },
+			{ id: 1, name: 'z', status: 'not available' }
+		]);
+	}, []);
+
+	return (
+		<Container>
+			<ActionButtons>
+				<Button>Scan</Button>
+				<Button>Terminate</Button>
+			</ActionButtons>
+			<CardsList>
+				{logs.map((item, i) => {
+					return (<ItemCard key={i} item={item} />);
+				})}
+			</CardsList>
+		</Container>
+	);
 }
-
-export default DevicesList;

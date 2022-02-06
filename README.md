@@ -81,9 +81,9 @@ npm run start
 # Task List
 - Basic react app setup: Done
 - Add basic components and basic styling: Done
-- Add routing for navigating multiple vew: Done
-- Add Functional components : Pending
-- Add Styled components: Pending
+- Add routing for navigating multiple view: Done
+- Add Functional components : Done
+- Add Styled components: Done
 - Add react context : Pending
 - MUI: try for better UI : Pending
 - Add Unit test: Pending

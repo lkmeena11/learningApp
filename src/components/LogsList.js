@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, CardsList } from '../utils/StyledCompLib';
+import ItemCard from './ui/ItemCard';
 
-class LogsList extends React.Component {
-	constructor(props) {
-	  super(props);
-	}
+export default function LogsList() {
+	const [items, setItems] = useState([]);
 
-	render() {
-		return (
-            <div className="container">
-                <ul>
-                    <li>Log 1</li>
-                    <li>Log 2</li>
-                </ul>
-            </div>
-		);
-	}
+	useEffect(() => {
+		setItems([
+			{ action: 'Scan', name: 'x,y', time: '22/10/2021' },
+			{ action: 'Terminate', name: 'y', time: '02/02/2020' },
+			{ action: 'Scan', name: 'x', time: '15/11/2021' },
+		]);
+	}, []);
+	return (
+		<Container>
+			<CardsList>
+				{items.map((item, i) => {
+					return (<ItemCard key={i} item={item} />);
+				})}
+			</CardsList>
+		</Container>
+	);
 }
-
-export default LogsList;

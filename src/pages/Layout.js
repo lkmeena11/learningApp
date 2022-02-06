@@ -1,16 +1,17 @@
 import React from 'react';
 import { Outlet, NavLink } from "react-router-dom";
+import { NavBar, PageTitle, Menu, MenuItem } from '../utils/StyledCompLib';
 
 const Layout = () => {
   return (
     <>
-      <div className="navbar">
-        <div className="title">Endpoint Manager</div>
-        <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/logs">Logs</NavLink></li>
-        </ul>
-      </div>
+      <NavBar>
+      <PageTitle>Endpoint Manager</PageTitle>
+        <Menu>
+            <MenuItem><NavLink to="/">Home</NavLink></MenuItem>
+            <MenuItem><NavLink to="/logs">Logs</NavLink></MenuItem>
+        </Menu>
+      </NavBar>
 
       <Outlet />
     </>
