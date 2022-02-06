@@ -75,8 +75,39 @@ npm run start
 ```
 - Go to browser and type http://localhost
 
+# Additional dependencies added
+```
+npm i react-router-dom
+npm i styled-components
+npm i @material-ui/core
+```
 
+# Dependencies for unit testing 
+```
+npm i -D enzyme
+npm i -D @wojtekmaj/enzyme-adapter-react-17
+npm i -D jest
+npm i -D babel-jest @babel/preset-env
+```
+- Run unit test
+1. Add below key to scripts in package.json
+```
+"test": "jest"
+```
+- add babel.config.js with below content to use presets and plugins
+```
+module.exports = {
+  presets: [
+    '@babel/preset-env',
+    '@babel/preset-react'
+  ]
+}
+```
 
+- Good to go and hit
+```
+npm run test
+```
 
 # Task List
 - Basic react app setup: Done
@@ -86,6 +117,8 @@ npm run start
 - Add Styled components: Done
 - Add react context : Done
 - MUI: try for responsive UI : Done
-- Add Unit test: Pending
+- Add Unit test: Done
 - Add pagination: Pending
 - Add theme: Pending
+
+
