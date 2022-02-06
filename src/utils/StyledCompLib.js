@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import TableContainer from "@material-ui/core/TableContainer";
 
 export const NavBar = styled.nav`
   background: #365a83;
@@ -75,11 +76,56 @@ export const CardsList = styled.div`
 `;
 
 export const Card = styled.div`
-  display: inline-block;
-  width: 30%;
-  margin-right: 1%;
+    padding: 10px;
+    border-radius: 5px;
 `;
 
+export const ActiveCard = styled(Card)`
+  background: #9dc597;
+  color: #fff;
+`;
+
+export const DeviceTitle = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  width: calc(100% - 20px);
+`;
+
+export const DeviceInfo = styled.div`
+  margin: 5px 0px 0px 15px;
+`;
+
+export const DeviceStatus = styled.div`
+  display: inline-block;
+  background-color: #c2bdbd;
+  height: 0.8em;
+  width: 0.8em;
+  border-radius:50%;
+  margin-right: 5px;
+`;
+
+export const ActiveDeviceStatus = styled(DeviceStatus)`
+  background-color: #58a64d;
+`;
+
+/*
+  Logs Page
+*/
+export const LogsContainer = styled(Container)`
+  background: #000;
+`;
+
+export const StyledTableContainer = styled(TableContainer)`
+  border-radius: 0px !important;
+  background: transparent !important;
+
+  th, td {
+    color: #fff !important;
+  }
+`;
 
 
 

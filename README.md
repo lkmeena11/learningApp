@@ -84,6 +84,8 @@ npm run start
 - Add routing for navigating multiple view: Done
 - Add Functional components : Done
 - Add Styled components: Done
-- Add react context : Pending
-- MUI: try for better UI : Pending
+- Add react context : Done
+- MUI: try for responsive UI : Done
 - Add Unit test: Pending
+- Add pagination: Pending
+- Add theme: Pending
